@@ -6,6 +6,7 @@ Thought this would be a great way to investigate how it feels to program in rust
 
 * Day 1: * *
 * Day 2: * *
+* Day 3: * *
 
 ## Structure
 
