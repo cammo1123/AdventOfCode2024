@@ -8,6 +8,7 @@ Thought this would be a great way to investigate how it feels to program in rust
 * Day 2: * *
 * Day 3: * *
 * Day 4: * *
+* Day 5: * *
 
 ## Structure
 
