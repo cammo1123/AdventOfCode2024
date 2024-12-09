@@ -7,8 +7,8 @@ struct Block {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let file_path = "./test.txt";
-    // let file_path = "./real.txt";
+    // let file_path = "./test.txt";
+    let file_path = "./real.txt";
 
     let contents = fs::read_to_string(file_path)?;
     let (basic, advanced) = parse_input(&contents);
