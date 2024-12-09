@@ -1,0 +1,8 @@
+[package]
+name = "day_9"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = "0.18"
+eframe = "0.18"
