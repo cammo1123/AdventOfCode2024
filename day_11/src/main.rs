@@ -27,7 +27,7 @@ fn blink_stone(stone: u64, steps: i32, cache: &mut HashMap<(u64, i32), usize>) -
         return 1;
     }
 
-    let mut result;
+    let result;
     if stone == 0 {
         result = blink_stone(1, steps - 1, cache);
     } else {
