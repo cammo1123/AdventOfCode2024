@@ -2,8 +2,8 @@ use std::{fmt, hash::{Hash, Hasher}, ops::{Add, AddAssign, Sub}};
 
 #[derive(Debug, Clone, Copy, Default)]
 pub struct Vector {
-    pub x: i32,
-    pub y: i32,
+    pub x: i64,
+    pub y: i64,
 }
 
 impl PartialEq for Vector {
