@@ -1,4 +1,7 @@
-use std::{fs, collections::HashMap};
+mod utils;
+
+use utils::number_len::NumberLen;
+use std::{collections::HashMap, fs};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // let file_path = "./test.txt";
@@ -31,8 +34,8 @@ fn blink_stone(stone: u64, steps: i32, cache: &mut HashMap<(u64, i32), usize>) -
     if stone == 0 {
         result = blink_stone(1, steps - 1, cache);
     } else {
-        let number_str = stone.to_string();
-        if number_str.len() % 2 == 0 {
+        if stone.len() % 2 == 0 {
+            let number_str = stone.to_string();
             let halves = number_str.split_at(number_str.len() / 2);
             result = blink_stone(halves.0.parse().unwrap(), steps - 1, cache) + blink_stone(halves.1.parse().unwrap(), steps - 1, cache);
         } else {
@@ -44,6 +47,9 @@ fn blink_stone(stone: u64, steps: i32, cache: &mut HashMap<(u64, i32), usize>) -
     result
 }
 
-fn parse_input(contents: &String) -> Vec<u64> {
-    contents.split_whitespace().map(|str| str.parse::<u64>().unwrap()).collect()
+fn parse_input(contents: &str) -> Vec<u64> {
+    contents
+        .split_whitespace()
+        .map(|str| str.parse::<u64>().unwrap())
+        .collect()
 }
